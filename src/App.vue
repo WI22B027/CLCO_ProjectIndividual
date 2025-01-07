@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>Cloud File Upload Tool</h1>
+      <p>
+        Ein einfacher Weg, Dateien hochzuladen, zu teilen und automatisch zu
+        löschen.
+      </p>
+    </header>
+    <main>
+      <UploadSection />
+    </main>
+    <footer>
+      <p>&copy; 2025 Cloud File Upload Tool</p>
+    </footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UploadSection from './components/UploadSection.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    UploadSection,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/style.css';
 </style>
