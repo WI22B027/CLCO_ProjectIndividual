@@ -29,14 +29,6 @@ jobs:
         npm run build --if-present
         npm run test --if-present
 
-    - name: Deploy to Azure Web App
-      run: |
-        # Remove existing content in wwwroot
-        rm -rf /home/site/wwwroot/*
-      
-        # Copy built files from dist to wwwroot
-        cp -r ./dist/* /home/site/wwwroot/
-
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
       with:
